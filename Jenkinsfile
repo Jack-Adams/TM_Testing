@@ -8,6 +8,7 @@ pipeline {
             }
             steps {
                 bat 'echo "This is a different step"'
+            }
         }
         stage('Run') {
             steps {
