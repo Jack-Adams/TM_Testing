@@ -5,6 +5,7 @@ pipeline {
             steps {
                 bat 'echo "Hello, World!"'
                 bat 'echo "This is a test"'
+				bat 'echo "Third line test"'
             }
         }
         stage('Run') {
