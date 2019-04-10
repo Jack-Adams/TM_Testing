@@ -6,9 +6,6 @@ pipeline {
                 bat 'echo "Hello, World!"'
                 bat 'echo "This is a test"'
             }
-            steps2 {
-                bat 'echo "This is a second test"'
-            }
         }
     }
 }
