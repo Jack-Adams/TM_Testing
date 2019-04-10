@@ -12,9 +12,8 @@ public class SearchAuctions {
     }
 
     public void searchForItem(String searchText){
-
         driver.findElement(By.id("searchString")).sendKeys(searchText);
-
+        driver.findElement(By.xpath("//*[@id='generalSearch']/div[2]/button/span")).click();
     }
 }
 
