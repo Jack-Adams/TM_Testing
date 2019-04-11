@@ -2,7 +2,7 @@ pipeline {
     agent any
 	tools {
 		maven 'Maven 3.6.0'
-		jdk 'jdk11'
+		jdk 'jdk8'
 	}
     stages {
         stage('Initialise') {
@@ -12,9 +12,9 @@ pipeline {
             }
         }
 		
-        stage('Build') {
+        stage('Checkout') {
             steps {
-                bat 'echo "This is a placeholder"'
+                checkout scm
             }
         }
     }
