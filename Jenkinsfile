@@ -3,14 +3,7 @@ pipeline {
     stages {
         stage('Initialise') {
             steps {
-                bat "echo var: $PATH"
-				bat "echo var: $MAVEN_HOME"
-            }
-        }
-		
-        stage('Checkout') {
-            steps {
-                checkout scm
+                bat "mvn --version"
             }
         }
     }
