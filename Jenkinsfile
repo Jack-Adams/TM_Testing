@@ -1,16 +1,22 @@
 pipeline {
     agent any
+	tools {
+		maven 'Maven 3.6.0'
+		jdk 'jdk11'
+	}
     stages {
-        stage('Build') {
+        stage('Initialise') {
             steps {
-                bat 'echo "Hello, World!"'
-                bat 'echo "This is a test"'
-				bat 'echo "Third line test"'
+                bat '''
+				    echo "PATH = $(PATH)"
+					echo "MAVEN_HOME = $(MAVEN_HOME)"
+				'''
             }
         }
-        stage('Run') {
+		
+        stage('Build') {
             steps {
-                bat 'echo "This is a different stage"'
+                bat 'echo "This is a placeholder"'
             }
         }
     }
