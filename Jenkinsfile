@@ -16,6 +16,7 @@ pipeline {
 
 		stage('Test') {
 			steps{
+				bat "java HeadlessTesting"
 				bat "mvn test"
 			}
         }
