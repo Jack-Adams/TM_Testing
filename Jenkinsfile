@@ -11,6 +11,7 @@ pipeline {
 		stage('Compile') {
 			steps{
 				bat "mvn compile"
+				bat "echo %CLASSPATH%"
 			}
         }
 
