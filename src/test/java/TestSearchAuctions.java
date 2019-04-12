@@ -2,6 +2,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -18,7 +19,17 @@ public class TestSearchAuctions {
     @BeforeTest
     public void setUp(){
         System.setProperty("webdriver.chrome.driver", "src\\main\\resources\\chromedriver.exe");
-        this.driver = new ChromeDriver();
+        // Setting Chrome to headless
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("headless");
+        options.addArguments("window-size=1200x600");
+        this.driver = new ChromeDriver(options);
+        //
+
+        // Leave this uncommented unless using headless.
+//        this.driver = new ChromeDriver();
+        //
+
         wait = new WebDriverWait(driver, 20);
         this.auctionPage = new SearchAuctions(driver);
     }

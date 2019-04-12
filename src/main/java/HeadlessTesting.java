@@ -10,8 +10,7 @@ import java.io.IOException;
 
 public class HeadlessTesting {
     public static void main(String[] args) throws IOException {
-        System.setProperty("webdriver.chrome.driver",
-                "ChromeDriverPath");
+        System.setProperty("webdriver.chrome.driver", "src\\main\\resources\\chromedriver.exe");
         ChromeOptions options = new ChromeOptions();
         options.addArguments("headless");
         options.addArguments("window-size=1200x600");
