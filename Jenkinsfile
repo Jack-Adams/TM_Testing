@@ -3,8 +3,21 @@ pipeline {
     stages {
         stage('Initialise') {
             steps {
-                bat "mvn --version"
+                bat "mvn clean"
+			
             }
+		}
+		
+		stage('Compile') {
+			steps{
+				bat "mvn compile"
+			}
         }
-    }
+
+		stage('Test') {
+			steps{
+				bat "mvn test"
+			}
+        }
+	}
 }

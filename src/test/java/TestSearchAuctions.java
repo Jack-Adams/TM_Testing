@@ -12,12 +12,12 @@ import org.testng.annotations.Test;
 
 public class TestSearchAuctions {
     public WebDriver driver;
-    private SearchAuctions auctionPage;
+    public SearchAuctions auctionPage;
     public WebDriverWait wait;
 
     @BeforeTest
     public void setUp(){
-        System.setProperty("webdriver.chrome.driver", "src\\PageObjectModels\\resources\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "src\\main\\resources\\chromedriver.exe");
         this.driver = new ChromeDriver();
         wait = new WebDriverWait(driver, 20);
         this.auctionPage = new SearchAuctions(driver);
