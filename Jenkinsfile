@@ -16,7 +16,6 @@ pipeline {
 
 		stage('Test') {
 			steps{
-				bat "java -cp target/classes HeadlessTesting"
 				bat "mvn test"
 			}
         }
