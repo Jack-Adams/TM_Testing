@@ -33,6 +33,7 @@ public class TestSearchAuctions {
 
         wait = new WebDriverWait(driver, 20);
         this.auctionPage = new SearchAuctions(driver);
+        System.out.println("The webhook works whenever we push to the repo!");
     }
 
     @AfterTest
