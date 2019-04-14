@@ -32,9 +32,7 @@ public class TestSearchAuctions {
         //
 
         wait = new WebDriverWait(driver, 20);
-        System.out.println("Set wait");
         this.auctionPage = new SearchAuctions(driver);
-        System.out.println("Reached TM sandbox website");
     }
 
     @AfterTest
