@@ -50,8 +50,8 @@ public class TestSearchAuctions {
 
     @AfterTest
     public void tearDown() {
-//        this.driver.close();
-        this.driver.quit();
+        this.driver.close();
+//        this.driver.quit();
     }
 
     @Test
