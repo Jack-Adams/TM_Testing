@@ -33,7 +33,6 @@ public class TestSearchAuctions {
 
         wait = new WebDriverWait(driver, 20);
         this.auctionPage = new SearchAuctions(driver);
-        System.out.println("Test");
     }
 
     @AfterTest
