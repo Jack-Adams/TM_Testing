@@ -23,21 +23,21 @@ public class TestSearchAuctions {
         System.out.println("Set chromedriver path");
 
         // Setting Chrome to headless
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("headless");
-        options.addArguments("window-size=1200x600");
-        System.out.println("Set chromedriver options");
-        this.driver = new ChromeDriver(options);
-        System.out.println("made new headless chromedriver");
-        System.out.println(this.driver);
+//        ChromeOptions options = new ChromeOptions();
+//        options.addArguments("headless");
+//        options.addArguments("window-size=1200x600");
+//        System.out.println("Set chromedriver options");
+//        this.driver = new ChromeDriver(options);
+//        System.out.println("made new headless chromedriver");
+//        System.out.println(this.driver);
         //
 
 
 
         // Leave this uncommented unless using headless.
-//        this.driver = new ChromeDriver();
-//        System.out.println("Made new chromedriver");
-//        System.out.println(this.driver);
+        this.driver = new ChromeDriver();
+        System.out.println("Made new chromedriver");
+        System.out.println(this.driver);
         //
 
 
@@ -51,7 +51,7 @@ public class TestSearchAuctions {
     @AfterTest
     public void tearDown() {
         this.driver.close();
-//        this.driver.quit();
+        this.driver.quit();
     }
 
     @Test
