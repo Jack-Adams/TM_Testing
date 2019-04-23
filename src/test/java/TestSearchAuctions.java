@@ -20,15 +20,15 @@ public class TestSearchAuctions {
     public void setUp(){
         System.setProperty("webdriver.chrome.driver", "C:\\Program Files (x86)\\Jenkins\\workspace\\chromedriver.exe");
 
-        // Setting Chrome to headless
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("headless");
-        options.addArguments("window-size=1200x600");
-        this.driver = new ChromeDriver(options);
+        // Headless Chrome settings
+        //ChromeOptions options = new ChromeOptions();
+        //options.addArguments("headless");
+        //options.addArguments("window-size=1200x600");
+        //this.driver = new ChromeDriver(options);
         //
 
-        // Leave this uncommented unless using headless.
-//        this.driver = new ChromeDriver();
+        // Normal Chrome settings
+        this.driver = new ChromeDriver();
         //
 
         wait = new WebDriverWait(driver, 20);
