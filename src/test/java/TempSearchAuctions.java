@@ -11,7 +11,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class TestSearchAuctions {
+public class TempSearchAuctions {
     public WebDriver driver;
     public SearchAuctions auctionPage;
     public WebDriverWait wait;

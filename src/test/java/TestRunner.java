@@ -1,12 +1,10 @@
-//import cucumber.api.CucumberOptions;
-//import cucumber.api.testng.TestNGCucumberRunner;
-//
-//@CucumberOptions(
-//        features = "src/test/resources/features",
-//        glue = {"stepdefs"},
-//        tags = {"~@Ignore"}
-//)
-//
-//public class TestRunner {
-//    private TestNGCucumberRunner testNGCucumberRunner;
-//}
+import cucumber.api.CucumberOptions;
+import cucumber.api.testng.AbstractTestNGCucumberTests;
+import org.testng.annotations.Test;
+
+@CucumberOptions(
+        features = "src/test/resources/features",
+        glue = {"src/test/java/stepdefs"},
+        tags = {"@Everything"}
+)
+public class TestRunner extends AbstractTestNGCucumberTests {}
