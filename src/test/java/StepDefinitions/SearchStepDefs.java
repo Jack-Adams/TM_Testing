@@ -19,10 +19,10 @@ public class SearchStepDefs {
 
     @Before
     public void setup() {
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("headless");
-        options.addArguments("window-size=1200x600");
-        this.driver = new ChromeDriver(options);
+//        ChromeOptions options = new ChromeOptions();
+//        options.addArguments("headless");
+//        options.addArguments("window-size=1200x600");
+        this.driver = new ChromeDriver();
         this.driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 
