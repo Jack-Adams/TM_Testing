@@ -1,4 +1,3 @@
-@Everything
 Feature: Searching with the search bar
   As a potential buyer
   I want to search TradeMe
@@ -10,12 +9,11 @@ Feature: Searching with the search bar
   2. I can search for an item and not get irrelevant results.
 
   Scenario Outline:
-    Given I am on <a_page> with a search bar
-    When I search <term> in the search bar
-    Then I see results relevant to <term>
+    Given I am on "<a_page>" with a search bar
+    When I search "<term>" in the search bar
+    Then I see results relevant to "<term>"
 
     Examples:
       | a_page | term |
       | https://www.tmsandbox.co.nz/ | tea |
-      | https://www.tmsandbox.co.nz/ | panda |
       | https://www.tmsandbox.co.nz/ | bicycle |

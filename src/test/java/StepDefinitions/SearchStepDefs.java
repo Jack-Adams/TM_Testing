@@ -1,4 +1,4 @@
-package stepdefs;
+package StepDefinitions;
 
 import PageObjects.HomePage;
 import cucumber.api.java.After;
@@ -19,10 +19,10 @@ public class SearchStepDefs {
 
     @Before
     public void setup() {
-//        ChromeOptions options = new ChromeOptions();
-//        options.addArguments("headless");
-//        options.addArguments("window-size=1200x600");
-        this.driver = new ChromeDriver();
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("headless");
+        options.addArguments("window-size=1200x600");
+        this.driver = new ChromeDriver(options);
         this.driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 
@@ -31,24 +31,24 @@ public class SearchStepDefs {
         this.driver.quit();
     }
 
-    @Given("I am on (.*) with a search bar")
-    public void iAmOnA_pageWithASearchBar(String url) {
+    @Given("I am on {string} with a search bar")
+    public void i_am_on_with_a_search_bar(String url) {
         this.driver.get(url);
     }
 
-    @When("I search (.*) in the search bar")
+    @When("I search {string} in the search bar")
     public void iSearchInTheSearchBar(String searchTerm) {
         HomePage homePage = new HomePage(this.driver);
         homePage.searchText(searchTerm);
     }
 
-    @Then("I see results relevant to (.*)")
+    @Then("I see results relevant to {string}")
     public void iSeeResultsRelevantTo(String searchTerm) {
         WebElement title = this.driver.findElement(By.xpath("//*[@id=\"mainContent\"]/div[9]/div[1]/a[1]/div/div[6]/div[1]"));
         String assertString = "";
         if (title.getText().toLowerCase().contains(searchTerm)) {
             assertString = searchTerm;
         }
-        Assert.assertEquals(assertString, searchTerm);
+        Assert.assertEquals(assertString, searchTerm, "Found: testtesttest");
     }
 }

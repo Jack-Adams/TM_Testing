@@ -4,7 +4,8 @@ import org.testng.annotations.Test;
 
 @CucumberOptions(
         features = "src/test/resources/features",
-        glue = {"src/test/java/stepdefs"},
-        tags = {"@Everything"}
+        glue = {"StepDefinitions"}
 )
+
+@Test
 public class TestRunner extends AbstractTestNGCucumberTests {}

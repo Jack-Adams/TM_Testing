@@ -1,4 +1,4 @@
-import org.apache.commons.io.FileUtils;
+//import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -18,9 +18,9 @@ public class HeadlessTesting {
         driver.get("https://contentstack.built.io");
         driver.get("https://www.google.co.in/");
         System.out.println("title is: " + driver.getTitle());
-        File scrFile = ((TakesScreenshot) driver)
-                .getScreenshotAs(OutputType.FILE);
-        FileUtils.copyFile(scrFile, new File("pathTOSaveFile"));
+//        File scrFile = ((TakesScreenshot) driver)
+//                .getScreenshotAs(OutputType.FILE);
+//        FileUtils.copyFile(scrFile, new File("pathTOSaveFile"));
         driver.quit();
     }
 }
