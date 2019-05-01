@@ -16,4 +16,4 @@ Feature: Searching with the search bar
     Examples:
       | a_page | term |
       | https://www.tmsandbox.co.nz/ | tea |
-      | https://www.tmsandbox.co.nz/ | bicycle |
+#      | https://www.tmsandbox.co.nz/ | bicycle |
